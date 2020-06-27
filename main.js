@@ -1,36 +1,36 @@
-//office.png, under will be "if you could click me, that would be greeeaaat" link: https://en.wikipedia.org/wiki/Office_Space
+
 //button makes image/link appear/disappear
 
+//body
 let body = document.querySelector('body')
 
 let main = document.createElement('main')
 let btn = document.createElement('button')
 
+//main
+let IMG = document.createElement('IMG')
+let A = document.createElement('A')
+
+//prepend
 body.prepend(main)
 body.prepend(btn)
+main.prepend(A)
+main.prepend(IMG)
 
-
-// let IMG = document.body.main.createElement('img')
-// let office = new Image()
-// office.onload = function() {
-//    IMG.src = "./office.png"
-// }
-
-let src = document.createElement('head')
-
-
-//class image
+//image
+IMG.src = './office.png'
+let src = document.getElementsByClassName('IMG')
 
 
 
-//class link
+//link
+let link = document.createTextNode("if you could click me, that would be greeeaaat")
+A.append(link)
+A.title = "if you could click me, that would be greeeaaat"
+A.href = "https://en.wikipedia.org/wiki/Office_Space"
 
 
 //button
-
-
-//image
-// let office2 = document.createElement("div")
-// office2.append.src = "./office.png";
-
-
+btn.addEventListener('click', function() {
+    main.remove()
+})
